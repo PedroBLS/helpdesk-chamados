@@ -39,7 +39,7 @@ O prazo de resolução depende da prioridade (urgente 4 h, alta 8 h, média 24 h
 ```bash
 npm install
 npm run dev     # http://localhost:3000
-npm test        # 11 testes: regra de SLA, validação e formulário
+npm test        # 12 testes: regra de SLA, validação e formulário
 npm run build
 ```
 

@@ -12,6 +12,14 @@ test("mostra os erros ao enviar vazio e não registra o chamado", () => {
   expect(screen.queryByRole("status")).toBeNull();
 });
 
+test("o erro de um campo some assim que ele é corrigido", () => {
+  render(<FormNovoChamado />);
+  fireEvent.click(screen.getByRole("button", { name: "Abrir chamado" }));
+  fireEvent.change(screen.getByLabelText("E-mail"), { target: { value: "teste@exemplo.com" } });
+  expect(screen.queryByText("Informe um e-mail válido.")).toBeNull();
+  expect(screen.getByText("Informe quem está abrindo o chamado.")).toBeDefined();
+});
+
 test("registra o chamado quando tudo está preenchido", () => {
   render(<FormNovoChamado />);
   const preencher = (rotulo: string, valor: string) => fireEvent.change(screen.getByLabelText(rotulo), { target: { value: valor } });

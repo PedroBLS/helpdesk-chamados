@@ -33,7 +33,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         }`}
       >
         <div className="flex h-16 items-center gap-2 px-5">
-          <span className="grid h-8 w-8 place-items-center rounded-full bg-marca font-bold text-white">C</span>
+          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-marca font-bold text-white">C</span>
           <span className="whitespace-nowrap font-semibold">Central de Chamados</span>
         </div>
         <nav aria-label="Menu principal" className="mt-6 flex flex-col gap-1 px-3">

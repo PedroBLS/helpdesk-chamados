@@ -32,8 +32,11 @@ export function FormNovoChamado() {
   const [erros, setErros] = useState<Erros>({});
   const [enviado, setEnviado] = useState(false);
 
-  const alterar = (campo: keyof NovoChamado) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+  // Ao corrigir um campo, a mensagem de erro dele some na hora, sem esperar outro envio
+  const alterar = (campo: keyof NovoChamado) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setDados({ ...dados, [campo]: e.target.value });
+    if (erros[campo]) setErros({ ...erros, [campo]: undefined });
+  };
 
   const props = (campo: keyof NovoChamado) => ({
     id: campo,

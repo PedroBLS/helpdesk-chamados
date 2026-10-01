@@ -5,7 +5,9 @@ import { chamados } from "@/lib/chamados";
 import { PRIORIDADE, SLA, haQuanto } from "@/lib/rotulos";
 import { prazoFinal, situacaoSla } from "@/lib/sla";
 
-const dataHora = (d: Date) => d.toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" });
+// Fuso fixo: o servidor da Vercel roda em UTC e mostraria a hora 3 h adiantada
+const dataHora = (d: Date) =>
+  d.toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short", timeZone: "America/Sao_Paulo" });
 
 // Tela que não existe no layout original: segue o mesmo estilo de cartões
 export default async function DetalheChamado({ params }: PageProps<"/chamados/[id]">) {
