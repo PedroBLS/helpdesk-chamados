@@ -4,6 +4,8 @@
 
 Front-end de um sistema de chamados de suporte de TI, com painel de indicadores, lista filtrável, detalhe do chamado com **SLA** e formulário de abertura. Feito em **React + TypeScript (Next.js)** e **Tailwind CSS**, responsivo do celular ao desktop, a partir de um layout do Figma.
 
+**[▶ Ver online](https://helpdesk-chamados.vercel.app)** (abra também no celular)
+
 ## Do layout à interface
 
 O ponto de partida foi o layout [Dashboard Ticket Support](https://www.figma.com/community/file/1555578819353496902/dashboard-ticket-support), de **Sheikh Muhammad Ashik** (licença [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)). Reaproveitei a paleta de verdes, a fonte Poppins, os cartões de indicadores, a rosca, as barras e a tabela com status coloridos, e adaptei tudo para português e para dados de suporte.
